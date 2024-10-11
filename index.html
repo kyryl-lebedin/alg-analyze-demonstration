@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Algorithm Analyze Demonstration</title>
 
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
     <!-- Favicon -->
-    <link rel="icon" href="favicon.png" type="image/x-icon">
-    <!-- If using a PNG format instead of ICO -->
-    <!-- <link rel="icon" href="favicon.png" type="image/png"> -->
+    <link rel="icon" href="favicon.png" type="image/png">
 
     <style>
         body {
@@ -20,18 +21,29 @@
             margin: 0;
         }
         video {
-            width: 80vw; /* 80% of the viewport width */
-            height: 80vh; /* 80% of the viewport height */
-            object-fit: cover; /* Ensures the video scales properly */
+            width: 100%; /* Make video responsive */
+            height: auto; /* Maintain aspect ratio */
+            max-width: 80vw; /* Limit the width on large screens */
+            max-height: 80vh; /* Limit the height on large screens */
         }
     </style>
 </head>
 <body>
 
-    <video controls>
-        <source src="video.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
+    <div class="container-fluid">
+        <div class="row justify-content-center align-items-center vh-100">
+            <div class="col-12 col-md-10 col-lg-8">
+                <video controls>
+                    <source src="video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </div>
 
+    <!-- Bootstrap JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
